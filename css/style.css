@@ -16296,6 +16296,10 @@ textarea.form-control {
     padding-top: 120px;
     padding-bottom: 120px;
   }
+  .page .hello{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
   .page .section-intro-height-800 {
     padding-bottom: 490px;
   }
