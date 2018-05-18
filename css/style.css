@@ -16293,8 +16293,8 @@ textarea.form-control {
 
 @media (min-width: 1200px) and (max-height: 800px) {
   .page .section-height-800 {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
   .page .section-intro-height-800 {
     padding-bottom: 490px;
