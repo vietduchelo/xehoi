@@ -321,59 +321,187 @@
             </div>
           </div>
         </div>
-        <div class="shell offset-top-70 offset-lg-top-178 text-left">
-          <div class="range range-xs-left">
-            <div class="cell-sm-10 cell-md-4">
-              <h3>Xe
-                <br class="veil reveal-lg-inline-block">4 chỗ</h3>
-              <!-- Unit-->
-              <div class="unit unit-horizontal unit-spacing-sm offset-top-18">
-                <div class="unit-left">
-                  <h1 class="h1-variant-2 text-gray-dark-03 font-default text-uppercase-none text-sbold text-italic">4</h1>
-                </div>
-                <div class="unit-body">
-                  <div class="offset-top-14">
-                    <img src="images/home-01-227x154.jpg" width="227" height="154" alt="" class="img-responsive center-block">
-                  </div>
-                </div>
-              </div>
-              <p class="offset-top-30 offset-lg-top-60">Cho thuê 4 chỗ</p>
+       
+        <div class="container">
+            <div class="mySlides">
+              <div class="numbertext">1 / 4</div>
+              <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
             </div>
-            <div class="cell-sm-10 cell-md-4 offset-top-60 offset-md-top-0">
-              <h3>Xe
-                <br class="veil reveal-lg-inline-block">7 chỗ</h3>
-              <!-- Unit-->
-              <div class="unit unit-horizontal unit-spacing-sm offset-top-40">
-                <div class="unit-left">
-                  <h1 class="h1-variant-2 text-gray-dark-03 font-default text-uppercase-none text-sbold text-italic">7</h1>
-                </div>
-                <div class="unit-body">
-                  <div class="offset-top-14">
-                    <img src="images/home-02-251x116.jpg" width="251" height="116" alt="" class="img-responsive center-block">
-                  </div>
-                </div>
-              </div>
-              <p class="offset-top-30 offset-md-top-50 offset-lg-top-77 inset-lg-right-65">Cho thuê xe 7 chỗ</p>
+          
+            <div class="mySlides">
+              <div class="numbertext">2 / 4</div>
+              <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
             </div>
-            <div class="cell-sm-10 cell-md-4 offset-top-60 offset-md-top-0">
-              <h3>Xe
-                <br class="veil reveal-lg-inline-block">16 Chỗ</h3>
-              <!-- Unit-->
-              <div class="unit unit-horizontal unit-spacing-md offset-top-18">
-                <div class="unit-left">
-                  <h1 class="h1-variant-2 text-gray-dark-03 font-default text-uppercase-none text-sbold text-italic">16</h1>
-                </div>
-                <div class="unit-body">
-                  <div class="offset-top-45">
-                    <img src="images/home-03-236x116.jpg" width="236" height="116" alt="" class="img-responsive center-block">
-                  </div>
-                </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">3 / 4</div>
+              <img src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%">
+            </div>
+              
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%">
+            </div>
+        
+              
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+          
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
               </div>
-              <br>
-              <p class="offset-top-30 offset-md-top-35 offset-lg-top-67 inset-lg-right-30">Xe 16 chỗ</p>
+              <div class="column">
+                <img class="demo cursor" src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+              </div>
+              <div class="column">
+                  <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                  </div>
             </div>
           </div>
-        </div>
+          <style>
+            * {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  margin-bottom: 150px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.row{
+  margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 15px;
+    margin-top: -48px;
+    /* margin-right: -2px; */
+    color: white;
+    margin-left: -570px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 15px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+          </style>
+          <script>
+          var slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+          }
+          </script>
       </section>
       <!-- Page Footer-->
       <footer style="background: #292b31 url(images/background-05-1920x1100.jpg) center/cover no-repeat;" class="page-footer">
