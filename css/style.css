@@ -25057,3 +25057,16 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
     font-size: 45px;
   }
 }
+
+.thue{
+  margin-left: 200px;
+}
+.thue button{
+  width: 40%;
+  padding: 7px 3px 3px 7px;
+  background: orangered;
+  color: white;
+}
+.hehe labe{
+margin-right: 40px;
+}
