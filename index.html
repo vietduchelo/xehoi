@@ -358,7 +358,7 @@
                       </div>
                      
                     </div>
-                    <button type="submit" class="btn btn-primary offset-top-20 offset-md-top-45">Gửi</button>
+                    <button type="button" onclick="getTime()" class="btn btn-primary offset-top-20 offset-md-top-45">Gửi</button>
                   </div>
                 </div>
               </form>
@@ -650,6 +650,39 @@ img {
     j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
     f.parentNode.insertBefore(j, f);
   })(window, document, 'script', 'dataLayer', 'GTM-P9FT69');
+</script>
+<script>
+  function getTime() {
+  const arrayMonth = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+  var $dateTimePicker1 = $(plugins.bootstrapDateTimePicker[0]);
+  var $dateTimePicker2 = $(plugins.bootstrapDateTimePicker[1]);
+  // $dateTimePicker1 = $dateTimePicker1.context.value.splice($dateTimePicker1.context.value.indexOf(','), 1);
+  var dateTime1 = $dateTimePicker1.context.value;
+  var dateTime2 = $dateTimePicker2.context.value;
+  dateTime1 = dateTime1.replace(',', '');
+  dateTime2 = dateTime2.replace(',', '');
+
+  dateTime1 = dateTime1.split(' ');
+  dateTime2 = dateTime2.split(' ');
+
+  var dateNow = new Date();// lay thoi gian hien tai
+  var hour = dateNow.getHours();
+  var mm = dateNow.getMinutes();
+  var second = dateNow.getSeconds();
+  //2018                 //thang                     //ngay        
+  var ngayDat = new Date(dateTime1[3], arrayMonth.indexOf(dateTime1[2]), dateTime1[1], hour, mm, second);// lay thoi gian ở form
+  var ngayTra = new Date(dateTime2[3], arrayMonth.indexOf(dateTime2[2]), dateTime2[1], hour, mm, second);
+
+  // Muốn tính số ngày mượn thì 
+  var soNgayMuon = (ngayTra.getTime() - ngayDat.getTime()) / (24 * 60 * 60*1000);
+
+
+  console.log('Ngày đặt ' + ngayDat);
+  console.log('Ngày trả ' + ngayTra);
+  console.log('so ngay muon '+soNgayMuon);
+  
+}
 </script>
 <!-- End Google Tag Manager -->
 
