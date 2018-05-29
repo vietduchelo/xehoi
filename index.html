@@ -9,6 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <title>Xe Hơi Hoàng Phúc</title>
   <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
@@ -205,11 +206,10 @@
                 <h1 class="h1">Nhà Xe
                   <br class="veil reveal-lg-inline-block">Hoàng Phúc</h1>
                 <p class="text-big-25 offset-md-top-50 inset-lg-right-30 thep">Cho thuê hợp đồng tự lái, cho thuê xe 4-7-16-45 chỗ.
-                  <br>
-                  Hợp đồng tham quan du lịch Cưới Hỏi.
-                    <br> Đưa đón khách tuyến Quảng Ngãi - Sân bay Chu Lai - Đà Nẵng và ngược lại.
-                    <br> Đưa đón khách đi khám bệnh tuyền Đà Nẵng Quảng Nam.
-      
+                  <br> Hợp đồng tham quan du lịch Cưới Hỏi.
+                  <br> Đưa đón khách tuyến Quảng Ngãi - Sân bay Chu Lai - Đà Nẵng và ngược lại.
+                  <br> Đưa đón khách đi khám bệnh tuyền Đà Nẵng Quảng Nam.
+
                 </p>
                 <style>
                   .h1 {
@@ -217,7 +217,7 @@
 
                   }
 
-                  .thep{
+                  .thep {
                     text-shadow: 1px 1px black;
                   }
                 </style>
@@ -232,51 +232,92 @@
           <div class="box-lg-header bg-gray-darker context-dark section-50 section-md-75">
             <div class="shell">
               <p style="font-size: 25px;margin-left: 490px;">Tìm kiếm xe cho thuê</p>
-              <div class="thue">
-                  <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Tìm Xe</button>
-                  <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Tìm Chuyến Xe</button>
-              </div>    
-              <div class="modal fade" id="myModal" role="dialog">
-                  <div class="modal-dialog">
-                  
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title" style="color: black">Tìm Xe</h4>
-                      </div>
-                      <div class="modal-body hehe">
-                      <label style="margin-right: 26px">Loại chỗ:</label>
-                      <input width="100%" type="text" placeholder="loại chỗ(nhập số)"> <br>
-                      <label style="margin-right: 26px">Địa điểm:</label>
-                      <input type="text" placeholder="địa điểm"><br>
-                      <label style="margin-right: 26px">Ngày đặt:</label>
-                      <input type="date" placeholder="ngày đặt"><br>
-                      <label style="margin-right: 26px">Ngày Trả:</label>
-                      <input type="date" placeholder="ngày trả"><br>
-                      <label >Giờ nhận xe:</label>
-                      <input type="text" placeholder="giờ nhận xe(nhập số)"><br>
-                      <label style="margin-right: 12px" >Giờ trả xe:</label>
-                      <input type="text" placeholder="giờ trả xe(nhập số)"><br>
-                     
-                      <style>
-                        input{
-                          width: 80%;
-                          border: none;
-                          border-bottom: 1px solid gainsboro;
-                        }
-                      </style>
-                      </div>
-                      <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Tìm</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                    
-                  </div>
-                </div>  
+
+              <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+                <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+              </div>
+
+              <div id="London" class="tabcontent">
+                <h3>London</h3>
+                <p>London is the capital city of England.</p>
+              </div>
+
+              <div id="Paris" class="tabcontent">
+                <h3>Paris</h3>
+                <p>Paris is the capital of France.</p>
+              </div>
+
+              <div id="Tokyo" class="tabcontent">
+                <h3>Tokyo</h3>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+
+              <script>
+                function openCity(evt, cityName) {
+                  var i, tabcontent, tablinks;
+                  tabcontent = document.getElementsByClassName("tabcontent");
+                  for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                  }
+                  tablinks = document.getElementsByClassName("tablinks");
+                  for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                  }
+                  document.getElementById(cityName).style.display = "block";
+                  evt.currentTarget.className += " active";
+                }
+              </script>
+              <style>
+                body {
+                  font-family: Arial;
+                }
+
+                /* Style the tab */
+
+                .tab {
+                  overflow: hidden;
+                  border: 1px solid #ccc;
+                  background-color: #f1f1f1;
+                }
+
+                /* Style the buttons inside the tab */
+
+                .tab button {
+                  background-color: inherit;
+                  float: left;
+                  border: none;
+                  outline: none;
+                  cursor: pointer;
+                  padding: 14px 16px;
+                  transition: 0.3s;
+                  font-size: 17px;
+                }
+
+                /* Change background color of buttons on hover */
+
+                .tab button:hover {
+                  background-color: #ddd;
+                }
+
+                /* Create an active/current tablink class */
+
+                .tab button.active {
+                  background-color: #ccc;
+                }
+
+                /* Style the tab content */
+
+                .tabcontent {
+                  display: none;
+                  padding: 6px 12px;
+                  border: 1px solid #ccc;
+                  border-top: none;
+                }
+              </style>
             </div>
           </div>
+
           <div class="box-lg-body section-50 section-md-90 bg-alabaster">
             <div class="shell">
               <!-- RD Mailform-->
@@ -285,7 +326,7 @@
                   <div class="cell-sm-11 cell-md-4">
                     <div class="form-group form-group-select-outside">
                       <!--Select 2-->
-                      <label class="form-custom-label form-custom-label-outside">Loại xe(chỗ)</label>
+                      <label class="form-custom-label form-custom-label-outside hehe">Loại xe(chỗ)</label>
                       <select data-placeholder="Please Select" data-minimum-results-for-search="Infinity" data-constraints="@Required" class="form-control select-filter">
                         <option value="">&nbsp;</option>
                         <option value="2">4</option>
@@ -295,7 +336,7 @@
                     </div>
                     <div class="form-group form-group-select-outside offset-top-35 offset-sm-top-18">
                       <!--Select 2-->
-                      <label class="form-custom-label form-custom-label-outside">Địa Điểm</label>
+                      <label class="form-custom-label form-custom-label-outside hehe">Địa Điểm</label>
                       <select data-placeholder="Please Select" data-minimum-results-for-search="Infinity" data-constraints="@Required" class="form-control select-filter">
                         <option value="">&nbsp;</option>
                         <option value="2">Quảng Ngãi </option>
@@ -315,7 +356,7 @@
                   <div class="cell-xs-6 cell-sm-6 cell-md-4 offset-top-35 offset-md-top-0">
                     <!-- BootstrapDateTimePicker-->
                     <div class="form-group form-group-icon">
-                      <label for="home-pickup-date" class="form-label form-label-outside">Ngày đặt:</label>
+                      <label for="home-pickup-date" class="form-label form-label-outside hehe">Ngày đặt:</label>
                       <div class="form-control-wrap">
                         <input id="home-pickup-date" type="text" name="pickup-date" data-time-picker="date" data-constraints="@Required" class="form-control">
                         <span class="icon icon-xs fa fa-angle-down text-gray-dark"></span>
@@ -323,7 +364,7 @@
                     </div>
                     <!-- BootstrapDateTimePicker-->
                     <div class="form-group form-group-icon offset-top-35 offset-sm-top-18">
-                      <label for="home-pickup-drop" class="form-label form-label-outside">Ngày trả</label>
+                      <label for="home-pickup-drop" class="form-label form-label-outside hehe">Ngày trả</label>
                       <div class="form-control-wrap">
                         <input id="home-pickup-drop" type="text" name="pickup-drop" data-time-picker="date" data-constraints="@Required" class="form-control">
                         <span class="icon icon-xs fa fa-angle-down text-gray-dark"></span>
@@ -331,222 +372,240 @@
                     </div>
                     <div class="form-group offset-top-35 offset-sm-top-65">
                       <div class="form-group">
-                        <label class="checkbox-inline text-gray-dark text-spacing-30 text-sm-nowrap">
-                          <input name="input-group-radio" value="checkbox-1" type="checkbox" checked>Độ tuổi của lái xe 30 – 65?
-                        </label>
                       </div>
                     </div>
                   </div>
                   <div class="cell-lg-1 offset-top-0 veil reveal-lg-inline-block">
-                    <label for="home-pickup-date" class="label-inverse-lg-none icon icon-img icon-circle icon-default offset-top-40 veil reveal-sm-inline-block">
+                    <label for="home-pickup-date" class="label-inverse-lg-none icon icon-img icon-circle icon-default offset-top-40 veil reveal-sm-inline-block hehe">
                       <img src="images/icon-01-23x20.png" width="23" height="20" alt="" class="img-responsive center-block">
                     </label>
-                    <label for="home-pickup-drop" class="label-inverse-lg-none icon icon-img icon-circle icon-default offset-top-35 veil reveal-sm-inline-block">
+                    <label for="home-pickup-drop" class="label-inverse-lg-none icon icon-img icon-circle icon-default offset-top-35 veil reveal-sm-inline-block hehe">
                       <img src="images/icon-01-23x20.png" width="23" height="20" alt="" class="img-responsive center-block">
                     </label>
                   </div>
                   <div class="cell-xs-6 cell-sm-5 cell-md-4 cell-lg-3 offset-top-35 offset-md-top-0">
                     <div class="form-group product-number">
-                      <label class="form-custom-label form-custom-label-outside">TG thuê:</label>
+                      <label class="form-custom-label form-custom-label-outside hehe">TG thuê:</label>
                       <input type="number" data-zeros="true" value="1" min="1" max="24" data-constraints="@Numeric @Required" class="form-control">
                     </div>
-                   
+
                     <div class="offset-top-5 offset-sm-top-0 offset-inverse-sm-top-10">
                       <div class="form-group product-number">
-                        <label class="form-custom-label form-custom-label-outside">TG trả:</label>
+                        <label class="form-custom-label form-custom-label-outside hehe">TG trả:</label>
                         <input type="number" data-zeros="true" value="1" min="1" max="24" data-constraints="@Numeric @Required" class="form-control">
                       </div>
-                     
+
                     </div>
-                    <button type="button" onclick="getTime()" class="btn btn-primary offset-top-20 offset-md-top-45">Gửi</button>
+                    <button type="button" onclick="getTime()" class="btn btn-primary offset-top-20 offset-md-top-45 hehe">Gửi</button>
                   </div>
                 </div>
               </form>
             </div>
           </div>
         </div>
-       
+
         <div class="container">
-            <div class="mySlides">
-              <div class="numbertext">1 / 4</div>
-              <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+          <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%">
+          </div>
+
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)"
+                alt="The Woods">
             </div>
-          
-            <div class="mySlides">
-              <div class="numbertext">2 / 4</div>
-              <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+            <div class="column">
+              <img class="demo cursor" src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)"
+                alt="Trolltunga, Norway">
             </div>
-          
-            <div class="mySlides">
-              <div class="numbertext">3 / 4</div>
-              <img src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%">
+            <div class="column">
+              <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(3)"
+                alt="Mountains and fjords">
             </div>
-              
-            <div class="mySlides">
-              <div class="numbertext">4 / 4</div>
-              <img src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%">
+            <div class="column">
+              <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(4)"
+                alt="Northern Lights">
             </div>
-        
-              
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-          
-            <div class="caption-container">
-              <p id="caption"></p>
+            <div class="column">
+              <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(4)"
+                alt="Northern Lights">
             </div>
-          
-            <div class="row">
-              <div class="column">
-                <img class="demo cursor" src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-              </div>
-              <div class="column">
-                <img class="demo cursor" src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
-              </div>
-              <div class="column">
-                <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-              </div>
-              <div class="column">
-                <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-              </div>
-              <div class="column">
-                  <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                  </div>
+            <div class="column">
+              <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(4)"
+                alt="Northern Lights">
             </div>
           </div>
-          <style>
-            * {
-  box-sizing: border-box;
-}
+        </div>
+        <style>
+          * {
+            box-sizing: border-box;
+          }
 
-img {
-  vertical-align: middle;
-}
+          img {
+            vertical-align: middle;
+          }
 
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
+          /* Position the image container (needed to position the left and right arrows) */
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-.row{
-  margin-left: 0px;
-    margin-right: 0px;
-}
+          .container {
+            position: relative;
+            margin-bottom: 50px;
+            margin-top: 50px;
+          }
 
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
+          /* Hide the images by default */
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 15px;
-    margin-top: -48px;
-    /* margin-right: -2px; */
-    color: white;
-    margin-left: -570px;
-    font-weight: bold;
-    font-size: 20px;
-    margin-right: 15px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
+          .mySlides {
+            display: none;
+          }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+          .row {
+            margin-left: 0px;
+            margin-right: 0px;
+          }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
+          /* Add a pointer when hovering over the thumbnail images */
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+          .cursor {
+            cursor: pointer;
+          }
 
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
+          /* Next & previous buttons */
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+          .prev,
+          .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 15px;
+            margin-top: -48px;
+            /* margin-right: -2px; */
+            color: white;
+            margin-left: -570px;
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 15px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+          }
 
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
+          /* Position the "next button" to the right */
 
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
+          .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+          }
 
-.active,
-.demo:hover {
-  opacity: 1;
-}
-          </style>
-          <script>
+          /* On hover, add a black background color with a little bit see-through */
+
+          .prev:hover,
+          .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+          }
+
+          /* Number text (1/3 etc) */
+
+          .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+          }
+
+          /* Container for image text */
+
+          .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+          }
+
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+
+          /* Six columns side by side */
+
+          .column {
+            float: left;
+            width: 16.66%;
+          }
+
+          /* Add a transparency effect for thumnbail images */
+
+          .demo {
+            opacity: 0.6;
+          }
+
+          .active,
+          .demo:hover {
+            opacity: 1;
+          }
+        </style>
+        <script>
           var slideIndex = 1;
           showSlides(slideIndex);
-          
+
           function plusSlides(n) {
             showSlides(slideIndex += n);
           }
-          
+
           function currentSlide(n) {
             showSlides(slideIndex = n);
           }
-          
+
           function showSlides(n) {
             var i;
             var slides = document.getElementsByClassName("mySlides");
             var dots = document.getElementsByClassName("demo");
             var captionText = document.getElementById("caption");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
+            if (n > slides.length) {
+              slideIndex = 1
+            }
+            if (n < 1) {
+              slideIndex = slides.length
+            }
             for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+              slides[i].style.display = "none";
             }
             for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
+              dots[i].className = dots[i].className.replace(" active", "");
             }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
           }
-          </script>
+        </script>
       </section>
       <!-- Page Footer-->
       <footer style="background: #292b31 url(images/background-05-1920x1100.jpg) center/cover no-repeat;" class="page-footer">
@@ -653,36 +712,38 @@ img {
 </script>
 <script>
   function getTime() {
-  const arrayMonth = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const arrayMonth = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
+      'October', 'November', 'December'
+    ];
 
-  var $dateTimePicker1 = $(plugins.bootstrapDateTimePicker[0]);
-  var $dateTimePicker2 = $(plugins.bootstrapDateTimePicker[1]);
-  // $dateTimePicker1 = $dateTimePicker1.context.value.splice($dateTimePicker1.context.value.indexOf(','), 1);
-  var dateTime1 = $dateTimePicker1.context.value;
-  var dateTime2 = $dateTimePicker2.context.value;
-  dateTime1 = dateTime1.replace(',', '');
-  dateTime2 = dateTime2.replace(',', '');
+    var $dateTimePicker1 = $(plugins.bootstrapDateTimePicker[0]);
+    var $dateTimePicker2 = $(plugins.bootstrapDateTimePicker[1]);
+    // $dateTimePicker1 = $dateTimePicker1.context.value.splice($dateTimePicker1.context.value.indexOf(','), 1);
+    var dateTime1 = $dateTimePicker1.context.value;
+    var dateTime2 = $dateTimePicker2.context.value;
+    dateTime1 = dateTime1.replace(',', '');
+    dateTime2 = dateTime2.replace(',', '');
 
-  dateTime1 = dateTime1.split(' ');
-  dateTime2 = dateTime2.split(' ');
+    dateTime1 = dateTime1.split(' ');
+    dateTime2 = dateTime2.split(' ');
 
-  var dateNow = new Date();// lay thoi gian hien tai
-  var hour = dateNow.getHours();
-  var mm = dateNow.getMinutes();
-  var second = dateNow.getSeconds();
-  //2018                 //thang                     //ngay        
-  var ngayDat = new Date(dateTime1[3], arrayMonth.indexOf(dateTime1[2]), dateTime1[1], hour, mm, second);// lay thoi gian ở form
-  var ngayTra = new Date(dateTime2[3], arrayMonth.indexOf(dateTime2[2]), dateTime2[1], hour, mm, second);
+    var dateNow = new Date(); // lay thoi gian hien tai
+    var hour = dateNow.getHours();
+    var mm = dateNow.getMinutes();
+    var second = dateNow.getSeconds();
+    //2018                 //thang                     //ngay        
+    var ngayDat = new Date(dateTime1[3], arrayMonth.indexOf(dateTime1[2]), dateTime1[1], hour, mm, second); // lay thoi gian ở form
+    var ngayTra = new Date(dateTime2[3], arrayMonth.indexOf(dateTime2[2]), dateTime2[1], hour, mm, second);
 
-  // Muốn tính số ngày mượn thì 
-  var soNgayMuon = (ngayTra.getTime() - ngayDat.getTime()) / (24 * 60 * 60*1000);
+    // Muốn tính số ngày mượn thì 
+    var soNgayMuon = (ngayTra.getTime() - ngayDat.getTime()) / (24 * 60 * 60 * 1000);
 
 
-  console.log('Ngày đặt ' + ngayDat);
-  console.log('Ngày trả ' + ngayTra);
-  console.log('so ngay muon '+soNgayMuon);
-  
-}
+    console.log('Ngày đặt ' + ngayDat);
+    console.log('Ngày trả ' + ngayTra);
+    console.log('so ngay muon ' + soNgayMuon);
+
+  }
 </script>
 <!-- End Google Tag Manager -->
 

@@ -25070,3 +25070,69 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 .hehe labe{
 margin-right: 40px;
 }
+body{
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+
+}
+h1 {
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+h3 {
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.4px;
+}
+p {
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+blockquote {
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;
+}
+pre {
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.5714px;
+}
+label{
+
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18.5714px;
+  
+}
+.hehe{
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+
+}
+input{
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+
+}
+.huhu{
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+font-size: 15px;
+}
